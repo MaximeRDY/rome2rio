@@ -13,9 +13,9 @@ module Rome2rio
       if @kind != "flight" then
         @isImperial = json["isImperial"]
         @sName = json["sName"]
-        @sPos = Position.parse(json["sPos"])
+        @sPos = Position.parse(json["sPos"].split(","))
         @tName = json["tName"]
-        @tPos = Position.parse(json["tPos"])
+        @tPos = Position.parse(json["tPos"].split(","))
         @path = json["path"]
       else
         @sCode = json["sCode"]

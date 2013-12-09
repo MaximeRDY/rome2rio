@@ -3,9 +3,9 @@ module Rome2rio
     attr_reader :sName, :sPos, :tName, :tPos, :frequency, :duration, :indicativePrice, :lines
     def initialize(json)
       @sName = json["sName"]
-      @sPos = Position.parse(json["sPos"])
+      @sPos = Position.parse(json["sPos"].split(","))
       @tName = json["tName"]
-      @tPos = Position.parse(json["tPos"])
+      @tPos = Position.parse(json["tPos"].split(","))
       @frequency = json["frequency"]
       @duration = json["duration"]
       @indicativePrice = IndicativePrice.new(json["indicativePrice"])
