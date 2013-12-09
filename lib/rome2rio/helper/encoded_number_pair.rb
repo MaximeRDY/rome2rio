@@ -16,6 +16,11 @@ module Rome2rio
       ret
     end
 
+    def self.new_parse(str)
+      a, b = str.split(",")
+      new(a,b)
+    end
+
     def to_s
       "#{a}, #{b}"
     end
