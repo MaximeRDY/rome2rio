@@ -4,7 +4,7 @@ module Rome2rio
     def initialize(json)
       @code = json["code"]
       @name = json["name"]
-      @pos = Position.parse(json["pos"])
+      @pos = Position.new_parse(json["sPos"])
     end
   end
 end
